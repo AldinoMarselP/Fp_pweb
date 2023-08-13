@@ -1,0 +1,49 @@
+  
+        .content-container{
+            padding-left : 150px;
+            padding-right : 150px;
+            padding-top : 20px;
+        }
+
+        .photo-collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .photo {
+            flex: 0 0 calc(33.33% - 10px);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .photo:hover .photo-overlay {
+            opacity: 1;
+        }
+        

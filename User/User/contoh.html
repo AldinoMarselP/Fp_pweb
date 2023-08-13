@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-McCJDVSHMnlaK/ym1utE5mEs3M3ncvPRjUaowh6h4lylXc3V6q5bWSwGzeoX6uRJU1IGlG8J1sAzkkCyzzLZpA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .payment-details {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            padding: 20px;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
+  
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-2" style="background-color: rgb(0, 164, 255);">
+            <a class="navbar-brand ps-5" href="userhome.php">
+                <img src="../gambar/Asset 1.png" alt="Logo" height="45" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="nav">
+                <ul class="navbar-nav me-5 pe-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">Travel Add-ons</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Xperience.php">Xperience</a></li>
+                            <li><a class="dropdown-item" href="Voucher.php">Gift Voucher</a></li>
+                            <li><a class="dropdown-item" href="Rental bus.html">Bus Rental</a></li>
+                            <li><a class="dropdown-item" href="Panduan Wisata.php">Panduan Wisata</a></li>
+                            <li><a class="dropdown-item" href="Antar Jemput Pelanggan.html">Antar Jemput
+                                    Pelanggan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="keranjang.php" class="nav-link active">Keranjang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PusatBantuan.html" class="nav-link active">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.php" class="nav-link active">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="../gambar/user.png" width="30px" alt="Account">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.php">Masuk</a></li>
+                            <li><a class="dropdown-item" href="register.php">Daftar</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="multiuser.html">Keluar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-3 mb-3 shadow p-3 mb-2 bg-body rounded" style="width: 540px; margin-left: 135px;">
+        <h1 class="mb-4">Pemesanan</h1>
+        <form id="paymentForm">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="no" class="form-label">No HP:</label>
+                <input type="text" class="form-control" id="no" name="no" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="jumlah" class="form-label">Jumlah Tiket:</label>
+                <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" required>
+            </div>
+
+            <div class="mb-3">
+                <a href="detail.html" class="btn btn-outline-success">Sebelumnya</a>
+                <button type="button" class="btn btn-secondary" id="hapus">Hapus</button>
+                <button type="submit" class="btn btn-primary" id="pesan">PESAN</button>
+            </div>
+        </form>
+
+        <div class="payment-details">
+            <h2 class="mb-4">Pemesanan Details</h2>
+            <p>Nama: <span id="namaOutput"></span></p>
+            <p>No HP: <span id="noOutput"></span></p>
+            <p>Email: <span id="emailOutput"></span></p>
+            <p>Jumlah Tiket: <span id="jumlahOutput"></span></p>
+            <p>Harga Tiket: <span id="hargaTiket"></span></p>
+            <p>Subtotal: <span id="subtotalOutput"></span></p>
+            <p>Diskon: <span id="diskonOutput"></span></p>
+            <p>Total: <span id="totalOutput"></span></p>
+            <button type="button" class="btn btn-primary" id="selectSeats">Select Seats</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('paymentForm');
+            const submitButton = document.getElementById('pesan');
+            const resetButton = document.getElementById('hapus');
+            const paymentDetails = document.querySelector('.payment-details');
+            const selectSeatsButton = document.getElementById('selectSeats');
+            
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const nama = document.getElementById('nama').value;
+                const noHp = document.getElementById('no').value;
+                const email = document.getElementById('email').value;
+                const jumlahTiket = document.getElementById('jumlah').value;
+                const subtotal = jumlahTiket * 50000;
+                const diskon = subtotal >= 250000 ? subtotal * 0.1 : 0;
+                const total = subtotal - diskon;
+    
+                document.getElementById('namaOutput').textContent = nama;
+                document.getElementById('noOutput').textContent = noHp;
+                document.getElementById('emailOutput').textContent = email;
+                document.getElementById('jumlahOutput').textContent = jumlahTiket;
+                document.getElementById('subtotalOutput').textContent = 'Rp ' + subtotal.toLocaleString();
+                document.getElementById('diskonOutput').textContent = 'Rp ' + diskon.toLocaleString();
+                document.getElementById('totalOutput').textContent = 'Rp ' + total.toLocaleString();
+                document.getElementById('hargaTiket').textContent = 'Rp 50,000';
+                paymentDetails.style.display = 'block';
+            });
+    
+            resetButton.addEventListener('click', function() {
+                form.reset();
+                paymentDetails.style.display = 'none';
+            });
+    
+            selectSeatsButton.addEventListener('click', function() {
+                // Perform any necessary actions before navigating to the next page
+                // For example, you can store the payment details in local storage or send them to the server
+    
+                // Navigate to the next page
+                window.location.href = 'kursi.html';
+            });
+        });
+    </script>
+    
+    <footer class="text-center text-lg-start text-white mt-5" style="background-color: #3e4551">
+        <div class="container-footer p-4">
+            <section class=" ps-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5 class="mb-3 fw-bold">Tujuan Populer</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Yogyakarta</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Bandung</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Semarang</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Surabaya</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Malang</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Denpasar</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Solo</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Medan</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3 fw-bold">Operator Populer</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Agra Mas</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">SAN</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Gunung Harta</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Harapan Jaya</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Nusantara</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">ALS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                  <h5 class="mb-3 fw-bold">ABOUT IndoBus</h5>
+                      <p>This web was created to finish our final project <br>
+                         we're sorry if there is an issue
+                      </p>
+                      <li>
+                            <a href="faqpage.php" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">FaQ</a>
+                      </li>
+                      <li>
+                            <a href="about.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">About Us</a>
+                      </li>
+                      <li>
+                            <a href="contactpage.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Contact</a>
+                      </li>
+                  </div>
+              </section>
+          </div>
+          <div class="text-center p-3" style="background-color: rgba(29, 29, 29, 0.2)">
+              © Copyrights Kelompok4.All Rights Reserved
+          </div>
+    </footer>
+</body>
+</html>

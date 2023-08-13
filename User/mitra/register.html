@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link href="stylelogin.css" rel="stylesheet">
+
+	<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-2" style="background-color: rgb(0, 164, 255);">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-5" href="datarute.php">
+                    <img src="Asset 1.png" alt="Logo" height="45" class="d-inline-block align-text-top"> 
+                    Mitra
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="nav">
+                    <ul class="navbar-nav me-5">
+                        <li class="nav-item">
+                            <a href="faqpage.php" class="nav-link active">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu Lain</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="user.png" width="30px" alt="Account">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="login.html#">Masuk</a></li>
+                                <li><a class="dropdown-item" href="register.html">Daftar</a></l>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="multiuser.html">Keluar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+	<div class="container infinity-container">
+		<div class="row">
+			<div class="col-md-1 infinity-left-space"></div>
+
+			<!-- FORM BEGIN -->
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center infinity-form">
+				<!-- Company Logo -->
+				<div class="text-center mb-3 mt-5">
+					<img src="logo.png" width="150px">
+				</div>
+				<div class="text-center mb-4">
+					<h4>Create an account</h4>
+				</div>
+				<!-- Form -->
+				<form class="px-3">
+					<!-- Input Box -->
+					<div class="form-input">
+						<span><i class="fa fa-user"></i></span>
+						<input type="text" name="" placeholder="Full Name" tabindex="10"required>
+					</div>
+					<div class="form-input">
+						<span><i class="fa fa-user"></i></span>
+						<input type="text" name="" placeholder="User Name" tabindex="10"required>
+					</div>
+					<div class="form-input">
+						<span><i class="fa fa-envelope"></i></span>
+						<input type="email" name="" placeholder="Email Address" tabindex="10"required>
+					</div>
+					<div class="form-input">
+						<span><i class="fa fa-lock"></i></span>
+						<input type="password" name="" placeholder="Password" required>
+					</div>
+					<!--div class="form-input">
+						<span><i class="fa fa-lock"></i></span>
+						<input type="password" name="" placeholder="Password" required>
+					</div-->
+					
+					<!-- Register Button -->
+		            <div class="mb-3"> 
+						<button type="submit" class="btn btn-block">Register</button>
+					</div>
+					<div class="text-center mb-2">
+	                   	<div class="text-center mb-3" style="color: #777;">or register with</div>
+		                   	
+	                   	<!-- Facebook Button -->
+	                   	<a href="" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
+
+                    	<!-- Google Button -->
+						<a href="" class="btn btn-social btn-google"><i class="fa fa-google"></i></a>
+
+						<!-- Twitter Button -->
+						<a href="" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
+					</div>
+					<div class="text-center mb-5" style="color: #777;">Already have an account? 
+						<a class="login-link" href="login.html">Login here</a>
+			       	</div>
+				</form>
+			</div>
+
+			<script>
+				function handleGoogleSignIn(googleUser) {
+				  // Dapatkan ID token dari objek googleUser
+				  var id_token = googleUser.getAuthResponse().id_token;
+				  
+				  // Kirim ID token ke server Anda untuk verifikasi dan autentikasi
+			  
+				  // Contoh: Kirim ID token melalui AJAX ke endpoint backend
+				  $.ajax({
+					url: '/path/to/your/backend/endpoint',
+					method: 'POST',
+					data: { id_token: id_token },
+					success: function(response) {
+					  // Tangani respon dari server setelah verifikasi dan autentikasi
+					},
+					error: function(error) {
+					  // Tangani kesalahan saat mengirimkan ID token ke server
+					}
+				  });
+				}
+			  
+				function initGoogleSignIn() {
+				  // Inisialisasi Google Sign-In dengan menggunakan kunci API OAuth 2.0
+				  google.accounts.id.initialize({
+					client_id: '950821017514-e4c34heuq2pi5psa17ldt3kv3csp7tes.apps.googleusercontent.com',
+					callback: handleGoogleSignIn
+				  });
+			  
+				  // Tambahkan event listener untuk tombol login Google
+				  var googleLoginBtn = document.getElementById('google-login-btn');
+				  googleLoginBtn.addEventListener('click', function(event) {
+					event.preventDefault();
+					google.accounts.id.prompt();
+				  });
+				}
+			  
+				// Panggil fungsi inisialisasi Google Sign-In setelah halaman selesai dimuat
+				document.addEventListener('DOMContentLoaded', initGoogleSignIn);
+			  </script>
+			  
+
+			<!-- FORM END -->
+
+			<div class="col-md-1 infinity-right-space"></div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pemilihan Kursi Bus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="aldino.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-2" style="background-color: rgb(0, 164, 255);">
+            <a class="navbar-brand ps-5" href="userhome.php">
+                <img src="../gambar/Asset 1.png" alt="Logo" height="45" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="nav">
+                <ul class="navbar-nav me-5 pe-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">Travel Add-ons</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Xperience.php">Xperience</a></li>
+                            <li><a class="dropdown-item" href="Voucher.php">Gift Voucher</a></li>
+                            <li><a class="dropdown-item" href="Rental bus.html">Bus Rental</a></li>
+                            <li><a class="dropdown-item" href="Panduan Wisata.php">Panduan Wisata</a></li>
+                            <li><a class="dropdown-item" href="Antar Jemput Pelanggan.html">Antar Jemput
+                                    Pelanggan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="keranjang.php" class="nav-link active">Keranjang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PusatBantuan.html" class="nav-link active">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.php" class="nav-link active">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="../gambar/user.png" width="30px" alt="Account">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.php">Masuk</a></li>
+                            <li><a class="dropdown-item" href="register.php">Daftar</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="multiuser.html">Keluar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container-fluid">
+            <div class="row">
+                <h2 class="text-center">Pilih Kursi Ternyaman Mu!</h2>
+                <div class="seat-info1">
+                    <div class="container text-lg-start">
+                        <div class="row align-items-start">
+                            <div class="col tex">
+                                <div class="seat">2b</div>
+                                <div class="seat">4b</div>
+                                <div class="seat">6b</div>
+                                <div class="seat">8b</div>
+                                <div class="seat">10b</div>
+                                <div class="seat">12b</div>
+                                <div class="seat">14b</div>
+                                <div class="seat">15b</div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <div class="seat">2a</div>
+                                <div class="seat">4a</div>
+                                <div class="seat">6a</div>
+                                <div class="seat">8a</div>
+                                <div class="seat">10a</div>
+                                <div class="seat">12a</div>
+                                <div class="seat">14a</div>
+                                <div class="seat">15a</div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start mt-4">
+                            <div class="col">
+                                <div class="seat">1b</div>
+                                <div class="seat">3b</div>
+                                <div class="seat">5b</div>
+                                <div class="seat">7b</div>
+                                <div class="seat">9b</div>
+                                <div class="seat">11b</div>
+                                <div class="seat">13b</div>
+                            </div>
+                        </div>
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <div class="seat">1a</div>
+                                <div class="seat">3a</div>
+                                <div class="seat">5a</div>
+                                <div class="seat">7a</div>
+                                <div class="seat">9a</div>
+                                <div class="seat">11a</div>
+                                <div class="seat">13a</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="detail1">
+            <h4>Detail Pesanan</h4>
+            <ul class="list-group">
+                <li class="list-group-item">Kursi dipilih: <span id="selected-seats"></span></li>
+            </ul>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            let selectedSeats = [];
+    
+            $(".seat").on("click", function () {
+                $(this).toggleClass("selected");
+                let seatNumber = $(this).text();
+                if ($(this).hasClass("selected")) {
+                    selectedSeats.push(seatNumber);
+                } else {
+                    selectedSeats = selectedSeats.filter(seat => seat !== seatNumber);
+                }
+                $("#selected-seats").text(selectedSeats.join(", "));
+                $("#total-price").text("Rp" + selectedSeats.length * 150000); // Harga per kursi
+            });
+        </script>
+         <div class="button-container2">
+            <a href="pembayaran.html" class="button5">PESAN SEKARANG</a>
+           </div><br>
+           <div class="button-container2">
+               <a href="syarat.html">Syarat Penumpang</a>
+           </div>
+       
+       </div>
+       <div class="d-flex align-items-center">
+           <div class="seat mr-2" style="background-color: #a6a6a6;"></div>
+           <div class="text-muted">Kosong</div>
+       </div>
+       <div class="d-flex align-items-center">
+           <div class="seat mr-2" style="background-color: rgb(0, 164, 255);"></div>
+           <div class="text-muted">Pilihan Anda</div>
+       </div>
+       <div class="d-flex align-items-center">
+           <div class="seat mr-2" style="background-color: #F27123;"></div>
+           <div class="text-muted">Sudah diisi</div>
+       </div>
+
+    <footer class="text-center text-lg-start text-white mt-5" style="background-color: #3e4551">
+        <div class="container-footer p-4">
+            <section class=" ps-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5 class="mb-3 fw-bold">Tujuan Populer</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Yogyakarta</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Bandung</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Semarang</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Surabaya</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Malang</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Denpasar</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Solo</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="link-light link-underline-opacity-0">Medan</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3 fw-bold">Operator Populer</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Agra Mas</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">SAN</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Gunung Harta</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Harapan Jaya</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">Nusantara</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="link-light link-underline-opacity-0">ALS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                  <h5 class="mb-3 fw-bold">ABOUT IndoBus</h5>
+                      <p>This web was created to finish our final project <br>
+                         we're sorry if there is an issue
+                      </p>
+                      <li>
+                            <a href="faqpage.php" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">FaQ</a>
+                      </li>
+                      <li>
+                            <a href="about.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">About Us</a>
+                      </li>
+                      <li>
+                            <a href="contactpage.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Contact</a>
+                      </li>
+                  </div>
+              </section>
+          </div>
+          <div class="text-center p-3" style="background-color: rgba(29, 29, 29, 0.2)">
+              © Copyrights Kelompok4.All Rights Reserved
+          </div>
+    </footer>
+</body>
+</html>

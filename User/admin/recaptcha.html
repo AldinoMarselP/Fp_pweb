@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    .captcha-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .captcha-image {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="captcha-container">
+    <div class="captcha-image">
+      <!-- Tambahkan elemen untuk menampilkan gambar reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+    </div>
+    <button type="submit" onclick="submitForm()">Kirim</button>
+  </div>
+
+  <script>
+    function submitForm() {
+      var response = grecaptcha.getResponse();
+      
+      // Kirim respons ke server untuk verifikasi
+      // ...
+
+      // Contoh AJAX dengan jQuery
+      $.ajax({
+        url: 'verifikasi-recaptcha.php',
+        type: 'POST',
+        data: {response: response},
+        success: function(data) {
+          // Tangani respons dari server setelah verifikasi reCAPTCHA berhasil
+          // Lakukan tindakan yang sesuai
+        },
+        error: function() {
+          // Tangani kesalahan saat melakukan verifikasi reCAPTCHA
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+a {
+    text-decoration: none;
+  }
+/* rutebus */
+.box2 {
+    margin: auto;
+    width: 650px;
+    height: 450px;
+    padding: 20px;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+.button1 {
+    background-color: #F27123;
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 450px;
+}
+
+/* detail */
+.gambar {
+    float: right;
+    margin-left: 10px;
+  }
+.container5 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.box8 {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background:  rgb(202, 202, 202);
+}
+
+.buss {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.seat-info {
+    margin-bottom: 10px;
+}
+
+.bus-image {
+    width: 200px;
+    height: auto;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.button5 {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* pemesanan*/
+
+
+
+.box1 {
+    margin-left: 100px;
+    width: 500px;
+    height: 450px;
+    padding: 20px;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+.box4 {
+    margin-left: 1100px;
+    margin-top: -450px;
+    width: 250px;
+    height: 355px;  
+    padding: 20px;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+.button-container1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    height: 50px;
+}
+.button1 {
+    background-color: #F27123;
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 1%;
+    font-size: small;
+    height: auto;
+}
+
+.button3 {
+    width: auto;
+    background-color: rgb(0, 164, 255);
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 190px;
+    font-size: smaller;
+    height: auto;
+}
+
+.button2 {
+    margin-left: 155px;
+    background-color: #F27123;
+    border: 0px solid;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+
+.spasi-kata1 {
+    word-spacing: 6px; 
+    font-size: small;
+    height: 1px;
+ }
+
+ .spasi-kata2 {
+    word-spacing: 2px; 
+    font-size: small;
+    height: 1px;
+ }
+
+/* kursi */
+.container-fluid {
+    width: 500px;
+}
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+.seat-map {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.seat1 {
+    width: 50px;
+    height: 50px;
+    background-color: #f8f9fa;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.seat1.selected {
+    background-color: rgb(0, 164, 255);
+    color: #fff;
+}
+.seat-booked {
+    background-color: #6c757d;
+    cursor: default;
+}
+.seat-info1 {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.detail1 {
+    margin-top: 100px;
+    text-align: left;
+    width: 250px;
+    margin-left: 630px;
+}
+
+/* syarat */
+.container7 {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .terms h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .terms ul {
+    margin-bottom: 20px;
+  }
+  .terms li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 20px;
+  }
+  .terms li:before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color:  #007bff;
+  }
+  .terms p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+/* mitra pembayaran */
+  body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(202, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-details {
+    margin-top: 40px;
+}
+
+.payment-details h3 {
+    margin-bottom: 10px;
+}
+
+.payment-details p {
+    margin-bottom: 5px;
+}
+
+.payment-status {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.payment-status h2 {
+    margin-bottom: 20px;
+}
+
+.payment-status p {
+    margin-bottom: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* mitra iklan */
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(202, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ad-details {
+    margin-top: 40px;
+}
+
+.ad-details h3 {
+    margin-bottom: 10px;
+}
+
+.ad-details p {
+    margin-bottom: 5px;
+}
+
+.ad-status {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ad-status h2 {
+    margin-bottom: 20px;
+}
+
+.ad-status p {
+    margin-bottom: 10px;
+}
+
+.button-container2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-container2 button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* transaksi */
+.thank-you {
+    text-align: center;
+    margin-top:auto;
+  }
+
+.sope {
+    background-color: #F27123;
+}
+
+.box7 {
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+/* batal */
+.canceled {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .canceled-title {
+    font-size: 32px;
+    color:  #F27123;
+    margin-bottom: 10px;
+  }
+  .canceled-text {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .canceled-image {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .canceled-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+/* metode bayar */
+.container3 {
+    margin-left: 20px;
+}
+
+
+
+.payment-card {
+    border-radius: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: rgb(202, 202, 202);
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+.payment-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.payment-card-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.payment-card-content {
+    display: flex;
+    align-items: center;
+  }
+
+.box9 {
+    
+    margin-left: 1200px;
+    margin-top: -550px;
+    width: 250px;
+    height: 355px;  
+    padding: 20px;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+.button8 {
+    margin-left: 155px;
+    background-color: #F27123;
+    border: 0px solid;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.button6 {
+    background-color: #F27123;
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 1%;
+    font-size: small;
+    height: auto;
+}
+
+.button7 {
+    width: 135px;
+    background-color: rgb(0, 164, 255);
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 95px;
+    font-size: smaller;
+    height: auto;
+}
+.spasi-kata3 {
+    word-spacing: 6px; 
+    font-size: small;
+    height: 1px;
+ }
+.spasi-kata4 {
+    word-spacing: 2px; 
+    font-size: small;
+    height: 1px;
+ }
+
+ .button-container3{
+    display: flex;
+    justify-content: space;
+    margin-top: 10px;
+    height: 50px;
+ }
+
+/* detailiklan */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.iklan-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+/* input iklan */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #F27123;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.iklan-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.iklan-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

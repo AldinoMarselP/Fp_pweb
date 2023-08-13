@@ -1,0 +1,241 @@
+BUS
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #00A4FF;
+    color: #fff;
+    padding: 20px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section h2 {
+    margin-bottom: 10px;
+}
+.section p {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background: #f1f1f1;
+}
+/* riwayat */
+.box1 {
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 330px;
+    height: 300px;  
+    padding: 20px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.button1 {
+    background-color: #F27123;
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.box2 {
+    margin-left: 400px;
+    margin-top: -300px;
+    width: 700px;
+    height: 710px;  
+    padding: 20px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+ 
+.foto1 {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+}
+
+.detail {
+    margin-left: 300px;
+    margin-top: -350px;
+}
+
+.box3 {
+    margin-left: 400px;
+    margin-top: 20px;
+    width: 700px;
+    height: 100px;  
+    padding: 10px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.button3 {
+    margin-left: -280px;
+    width: 270px;
+    height: 50px;  
+    padding: 10px;
+}
+
+.button4 {
+    margin-right: -290px;
+    width: 300px;
+    height: 50px;  
+    padding: 10px;
+}
+
+.qr {
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+/* Not Found*/
+
+.box4 {
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 600px;
+    height: 250px;  
+    padding: 50px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Transaksi */
+
+.col-4 {
+    margin-right: 15px;
+    width: 360px;
+    padding: 5px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+}
+
+/* Hubungi CS */
+
+.foto3 {
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+.box5 {
+    margin-left: 650px;
+    margin-top: -250px;
+    width: 300px;
+    height: 220px;  
+    padding: 10px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* QR */
+
+.foto2 {
+    width: 350px;
+    height: 350px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+/* Pusat Bantuan */
+
+.box6 {
+    width: 250px;
+    height: 130px;  
+    padding: 10px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.button2 {
+    background-color: #F27123;
+    border: 0px solid;
+    padding: 5px 35px;
+    color: white;
+    border-radius: 5px;
+}
+
+.box9 {
+    width: 300px;
+    height: 130px;  
+    padding: 10px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Pengaduan Mitra */
+
+.box7 {
+    width: 350px;
+    height: 720px;  
+    padding: 20px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Input Data */
+
+.box8 {
+    width: 300px;
+    height: 450px;  
+    padding: 20px;
+    border: 1px solid rgb(203, 199, 199);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+   
+.bg-mynav {
+    background-color: #2c3e50;
+  }
+  
+  body {
+    font-size: 1.25rem;
+    background-color: #f6f8fa;
+  }
+  
+  td {
+    line-height: 3rem;
+  }
